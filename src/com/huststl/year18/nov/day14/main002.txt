@@ -1,0 +1,15 @@
+[LeetCode] Add Two Numbers 两个数字相加
+
+
+You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+
+
+解题思路：
+
+算法很简单，链表的数据类型也不难。就是建立一个新链表，然后把输入的两个链表从头往后撸，
+每两个相加，添加一个新节点到新链表后面，
+就是要处理下进位问题。还有就是最高位的进位问题要最后特殊处理一下。代码如下：
+

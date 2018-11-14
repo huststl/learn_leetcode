@@ -5,20 +5,27 @@ import java.util.HashMap;
 
 
 
-public class Main01 {
+public class Main001 {
 
     //  解法1
 
 
-    public int[] twoSum01(int[] nums, int target) {
-        HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
+
+    public int[] twoSum01(int[] nums,int target){
+
+        HashMap<Integer,Integer> m = new HashMap<Integer, Integer>();
+
         int[] res = new int[2];
-        for (int i = 0; i < nums.length; ++i) {
-            m.put(nums[i], i);
+
+        for(int i=0;i<nums.length;i++){
+            m.put(nums[i],i);
         }
-        for (int i = 0; i < nums.length; ++i) {
-            int t = target - nums[i];
-            if (m.containsKey(t) && m.get(t) != i) {
+
+        for(int i=0;i<nums.length;i++){
+
+            int t = target-nums[i];
+
+            if(m.containsKey(t) && m.get(t) !=i){
                 res[0] = i;
                 res[1] = m.get(t);
                 break;
@@ -26,7 +33,6 @@ public class Main01 {
         }
         return res;
     }
-
 
     //解法2
     public int[] twoSum02(int[] nums, int target) {
