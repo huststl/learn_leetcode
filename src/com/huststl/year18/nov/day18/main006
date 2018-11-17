@@ -1,0 +1,46 @@
+1. 题目描述：
+The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
+
+(you may want to display this pattern in a fixed font for better legibility)
+
+P   A   H   N   
+A P L S I I G   
+Y   I   R
+1
+2
+3
+And then read line by line: "PAHNAPLSIIGYIR"
+
+Write the code that will take a string and make this conversion given a number of rows:
+
+string convert(string s, int numRows);
+1
+Example 1:
+
+Input: s = “PAYPALISHIRING”, numRows = 3 
+Output: “PAHNAPLSIIGYIR”
+
+Example 2:
+
+Input: s = “PAYPALISHIRING”, numRows = 4 
+Output: “PINALSIGYAHRPI”
+
+Explanation:
+
+P     I    N
+A   L S  I G
+Y A   H R
+P     I
+
+2. 思路分析：
+ZigZag 是锯齿形的意思，题目是说将一个字符串按照锯齿形排列，然后按行输出结果。
+
+（1）思路一：
+按照锯齿形遍历输入的字符串，然后将每个字符存储到对应的行的字符串中，最后将所有航拼接成最终结果输出。
+
+（2）思路二：
+锯齿形排列的规律：发现所有行的重复周期都是 2 * numRows - 2
+
+对于首行和末行之间的行，还会额外重复一次，重复的这一次距离本周期起始字符的距离是 2 * numRows - 2 - 2 * i，
+
+找到了这个规律就好办了。
