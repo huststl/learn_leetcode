@@ -1,0 +1,20 @@
+Reverse Integer
+Reverse digits of an integer.
+
+Example1: x = 123, return 321
+Example2: x = -123, return -321
+
+Note:
+The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.
+
+
+
+今天比较懒所以就做道简单点的题。
+
+解题思路：
+
+这个就不断拿原来的数除以10得到余数，然后添加到新的数的后面作为个位数。不断迭代即可。
+
+然后针对那个说有可能会溢出的，就可以拿每次更新之后的数，倒推回去计算看是否得到更新之前的数，如果不是的话就溢出了。
+
+
