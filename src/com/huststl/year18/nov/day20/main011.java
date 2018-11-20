@@ -1,7 +1,7 @@
 package com.huststl.year18.nov.day20;
 
 //盛最多的水 难度（medium)
-public class Main020 {
+public class main011 {
 
 
     //解法1
