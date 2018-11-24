@@ -1,0 +1,30 @@
+[LeetCode] Letter Combinations of a Phone Number 电话号码的字母组合
+
+
+Given a digit string, return all possible letter combinations that the number could represent.
+
+A mapping of digit to letters (just like on the telephone buttons) is given below.
+
+
+
+Input:Digit string "23"
+
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+
+Note:
+
+Although the above answer is in lexicographical order, your answer could be in any order you want.
+
+让我们求电话号码的字母组合，即数字2到9中每个数字可以代表若干个字母，然后给一串数字，求出所有可能的组合，
+
+相类似的题目有Path Sum II，Subsets II，Permutations，Permutations II，Combinations，Combination Sum
+
+和Combination Sum II 等等。我们用递归Recursion来解，我们需要建立一个字典，用来保存每个数字所代表的字符串，
+
+然后我们还需要一个变量level，记录当前生成的字符串的字符个数，实现套路和上述那些题十分类似。
+
+在递归函数中我们首先判断level，如果跟digits中数字的个数相等了，我们将当前的组合加入结果res中，然后返回。
+
+否则我们通过digits中的数字到dict中取出字符串，然后遍历这个取出的字符串，
+
+将每个字符都加到当前的组合后面，并调用递归函数即可，参见代码如下：
