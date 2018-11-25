@@ -1,0 +1,19 @@
+清风吹斜阳
+——唯有更努力才能让一切都是最好的安排。
+LeetCode第[18]题(Java)：4Sum （四个数的和为目标值）——Medium
+题目难度：Medium
+
+题目：
+
+Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target?
+
+Find all unique quadruplets in the array which gives the sum of target.
+
+Note: The solution set must not contain duplicate quadruplets.
+
+翻译：
+
+给定一个n个整数的数组S，在S中是否存在有a、b、c、d的元素使得a+b+c+d=target?如果有，请找出数组中所有唯一的组合。
+
+注意:解决方案集不能包含重复的四胞胎。
+
