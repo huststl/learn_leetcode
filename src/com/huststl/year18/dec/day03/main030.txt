@@ -1,0 +1,41 @@
+[LeetCode] Substring with Concatenation of All Words 串联所有单词的子串
+
+
+You are given a string, s, and a list of words, words, that are all of the same length.
+
+Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly
+
+once and without any intervening characters.
+
+For example, given:
+
+s: "barfoothefoobarman"
+
+words: ["foo", "bar"]
+
+You should return the indices: [0,9].
+
+(order does not matter).
+
+利用哈希表和滑动窗口可以以O(n)的时间复杂度解决问题。
+
+思路：将words数组中的字符串存入hashmap，值为出现次数。
+
+然后开始遍历字符串s，外层循环从0到word[0].length-1，内层循环从i到最后(需判断最后是否越界)，
+
+内层循环每次增加一个word的长度，这样外层循环完毕后刚好遍历完所有情况。（注意，words中的每一个word长度相同，所以才可以这样遍历）
+
+维持一个滑动窗口，左右边界都只向右移动，每次先移动right，窗口大小表示匹配到的word个数，随着移动而增大或减小。
+
+移动right，如果map中存在当前字符串，修改map中对应word的个数，一旦发现当前需要修改的个数已经为0，
+
+说明出现了多余的字符串，窗口需要更新，这时候开始移动窗口左边界，直到左边界滑过与当前字符串相同的字符串，
+
+滑动左边界的同时把map中对应字符串的个数加回来。 
+
+如果当前map中找不到cur（当前字符串），说明cur之前的窗口已经没用了，重置窗口大小为0，
+
+将left到right的map值加回来，然后从下一个位置重新开始匹配。
+
+当窗口大小与words长度相同时，说明s中从left到right+wLen这一部分刚好可以匹配words，将left存入list即可。
+
