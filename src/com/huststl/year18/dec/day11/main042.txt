@@ -1,0 +1,22 @@
+
+leetcode42 Trapping Rain Water
+
+dynamic-programming  stack  two-pointers
+
+题目要求
+
+Given n non-negative integers representing an elevation map where the width of each bar is 1,
+
+ compute how much water it is able to trap after raining.
+
+For example,
+
+Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
+
+
+假设这些是一些间隔的木板，问最多能够装多少水。也就是一个区域性的短板问题。
+
+其实一个区间能够乘的最大水量，取决于它的左右最近且最高的木板的长度。当然除了通过多个区间的和来计算总体的盛水量，
+
+还可以通过横向的划分来计算盛水量。
+
