@@ -1,0 +1,12 @@
+[LeetCode] Multiply Strings 字符串相乘
+
+
+Given two numbers represented as strings, return multiplication of the numbers as a string.
+
+Note: The numbers can be arbitrarily large and are non-negative.
+
+为了避免溢出，显然应该考虑对应位相乘，求结果的每一位的值最后串在一起。
+
+比如，217*561，个位=7*1，十位=1*1+7*6，百位 = 7*5+1*6+2*1，千位=2*6+1*5，万位=2*5。
+
+分别存进数组里面，在考虑低位向高位的进位。转换为字符串之后考虑首位为0的情况
