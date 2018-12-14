@@ -1,0 +1,23 @@
+45. Jump Game II
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+Each element in the array represents your maximum jump length at that position.
+
+Your goal is to reach the last index in the minimum number of jumps.
+
+For example:
+Given array A = [2,3,1,1,4]
+
+The minimum number of jumps to reach the last index is2. (Jump1 step from index 0 to 1, then3 steps to the last index.)
+
+Note:
+You can assume that you can always reach the last index.
+
+看示例：
+[2,3,1,1,4]
+我们从后往前推，对于第4个数1，跳一次
+对于第3个数1，显然只能跳到第4个数上，那么从第3个数开始跳到最后需要两次
+对于第2个数3，显然一步到位，跳一次
+对于第一个数2，只能选择跳一次还是跳两次，显然选择跳一次的收益更大，最终只需跳两次
+
+倒着推时发现满足①最优子结构，②重叠子问题。可以使用动态规划。
