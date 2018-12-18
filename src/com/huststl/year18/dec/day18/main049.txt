@@ -1,0 +1,23 @@
+leetcode 49. Group Anagrams （Java实现）
+
+原题：
+
+Given an array of strings, group anagrams together.
+
+For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"],
+Return:
+
+[
+  ["ate", "eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+题目大意：给出一个字符串数组，将其按照组成字母相同这一条件来分组，即组成字符串的字符完全相同的字符串分成一组。
+解题思路：
+
+
+         用HashMap<String,List<String>>，每次讲读入的字符串在map中查找
+
+         （这里需将读入的字符串转化成数组后用sort（）来排列好）。
+
+
