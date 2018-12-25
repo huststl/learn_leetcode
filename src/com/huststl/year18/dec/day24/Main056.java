@@ -1,18 +1,18 @@
 package com.huststl.year18.dec.day24;
 
 
-import datastruc.Interval;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-/**
- * @author Junlan Shuai[shuaijunlan@gmail.com].
- * @date Created on 8:01 PM 2018/07/12.
- */
+
 public class Main056 {
+
+    class Interval {
+        int start;
+        int end;
+        Interval() { start = 0; end = 0; }
+        Interval(int s, int e) { start = s; end = e; }
+    }
 
     //解法1
     public List<Interval> merge(List<Interval> intervals) {
@@ -39,7 +39,7 @@ public class Main056 {
     }
 
     //解法2
-    public List<Interval> merge(List<Interval> intervals) {
+    public List<Interval> merge01(List<Interval> intervals) {
         List<Interval> list = new ArrayList<Interval>();
         Comparator<Interval> comparator = new Comparator<Interval>() {
             @Override
