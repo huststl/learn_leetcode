@@ -1,0 +1,19 @@
+(Java)LeetCode-61. Rotate List
+
+Given a list, rotate the list to the right by k places, where k is non-negative.
+
+For example:
+Given 1->2->3->4->5->NULL and k = 2,
+return 4->5->1->2->3->NULL.
+
+
+
+这道题也不是很难。循环右移一个链表。要注意的是循环的位数可能会超过链表长度。链表长度cnt  循环移位K位，
+
+实际上K = k % cnt
+
+所以需要一个指针p2求出链表的长度，顺便找到最后一个节点，因为最后一个节点需要指向第一个节点.
+
+还需要一个指针p1找到循环移动后的最后一个节点，它的下一个节点将成为第一个节点。
+
+仔细点即可。
